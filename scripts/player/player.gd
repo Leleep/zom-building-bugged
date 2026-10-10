@@ -75,9 +75,8 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("mouse_left") and not EventBus.player_interacting and fire_interval.time_left==0 and not reloading:
 		if ammo_in_mag>0:
 			ammo_in_mag-=1
-			for i in range(current_weapon.shells):
-				shoot()
-				EventBus.camera.screen_shake(current_weapon.recoil/2,0.2)
+			shoot()
+			EventBus.camera.screen_shake(current_weapon.recoil/2,0.2)
 		else:
 			reload()
 	
