@@ -27,6 +27,7 @@ func _ready() -> void:
 
 func level_setup():
 	level_number = EventBus.level_number
+	$CanvasLayer/Label3.text="FLOOR : "+ str(level_number) #fIX 2
 	kill_enemies()
 	main_lift_setup()
 	enemy_lift_setup()
